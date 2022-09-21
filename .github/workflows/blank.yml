@@ -54,7 +54,6 @@ jobs:
           wget https://github.com/microsoft/onnxruntime/releases/download/v1.12.1/onnxruntime-win-x64-1.12.1.zip
           unzip onnxruntime-win-x64-1.12.1.zip
           mv onnxruntime-win-x64-1.12.1 onnxruntime
-          ls -al
+          dir
           cd onnxruntime
-          ls -al
-          
+          dir          
