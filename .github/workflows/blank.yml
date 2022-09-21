@@ -38,8 +38,9 @@ jobs:
       - name: Download onnxruntime lib
         run: |
           wget https://github.com/microsoft/onnxruntime/releases/download/v1.12.1/onnxruntime-linux-x64-1.12.1.tgz
-          mkdir onnxruntime
-          tar -zxvf onnxruntime-linux-x64-1.12.1.tgz -C onnxruntime --strip-components=1
+          tar -zxvf onnxruntime-linux-x64-1.12.1.tgz
+          mv onnxruntime-linux-x64-1.12.1 onnxruntime
+          ls -al
           cd onnxruntime
           ls -al
   
@@ -52,5 +53,8 @@ jobs:
           choco install wget --no-progress
           wget https://github.com/microsoft/onnxruntime/releases/download/v1.12.1/onnxruntime-win-x64-1.12.1.zip
           unzip onnxruntime-win-x64-1.12.1.zip
-          dir
+          mv onnxruntime-win-x64-1.12.1 onnxruntime
+          ls -al
+          cd onnxruntime
+          ls -al
           
